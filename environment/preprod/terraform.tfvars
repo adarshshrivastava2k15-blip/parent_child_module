@@ -1,7 +1,7 @@
 rgs = {
   rg1 = {
     rg_name  = "rg-adarsh-preprod-01"
-    location = "eastus"
+    location = "centralindia"
   }
 }
 
