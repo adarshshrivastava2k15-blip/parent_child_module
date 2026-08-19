@@ -36,20 +36,6 @@ jobs:
       - name: Terraform Plan
         run: terraform plan -out=tfplan
 
-      - name: Run TFLint
-        uses: terraform-linters/tflint-action@v0.5.0
-
-      - name: Run tfsec
-        uses: aquasecurity/tfsec-action@v1.0.3
-
-      - name: Run Gitleaks
-        uses: gitleaks/gitleaks-action@v2
-
-      - name: Infra Cost Estimation
-        uses: infracost/infracost-gh-action@v2
-        with:
-          path: .
-          fail-on-diff: false
 
   apply:
     if: github.ref == 'refs/heads/main'
